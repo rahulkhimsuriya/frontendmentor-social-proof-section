@@ -53,4 +53,14 @@ export default {
   font-weight: 700;
   margin-left: 1rem;
 }
+
+@media screen and (max-width: 1020px) {
+  .review {
+    flex-direction: column;
+  }
+
+  .review__body {
+    margin-top: 0.5rem;
+  }
+}
 </style>

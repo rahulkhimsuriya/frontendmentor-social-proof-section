@@ -4,7 +4,7 @@
       v-for="(testimonial, index) in testimonials"
       :key="index"
       :testimonial="testimonial"
-      :style="{ 'margin-top': index * 2 + 'rem' }"
+      :class="`lg:mt-${(index + 1) * 2}`"
     />
   </section>
 </template>
@@ -49,4 +49,22 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.testimonial-section {
+  padding: 2rem 0;
+}
+
+@media only screen and (min-width: 1080px) {
+  .lg\:mt-2 {
+    margin-top: 2rem;
+  }
+
+  .lg\:mt-4 {
+    margin-top: 4rem;
+  }
+
+  .lg\:mt-6 {
+    margin-top: 6rem;
+  }
+}
+</style>

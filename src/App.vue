@@ -53,4 +53,11 @@ section {
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+@media screen and (max-width: 1020px) {
+  section {
+    flex-direction: column;
+    grid-gap: 1rem;
+  }
+}
 </style>

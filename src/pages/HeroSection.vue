@@ -16,7 +16,7 @@
         v-for="(review, index) in reviews"
         :key="index"
         :review="review"
-        :style="{ 'margin-left': index * 2 + 'rem' }"
+        :class="`lg:ml-${(index + 1) * 2}`"
       />
     </div>
   </section>
@@ -56,7 +56,6 @@ export default {
 <style lang="css" scoped>
 .hero-section {
   padding-top: 4rem;
-  padding-bottom: 1rem;
 }
 
 h1 {
@@ -70,5 +69,29 @@ p {
   font-size: 1rem;
   margin-top: 1rem;
   width: 70%;
+}
+
+@media only screen and (min-width: 992px) {
+  .lg\:ml-2 {
+    margin-left: 2rem;
+  }
+
+  .lg\:ml-4 {
+    margin-left: 4rem;
+  }
+
+  .lg\:ml-6 {
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .hero-section {
+    text-align: center;
+  }
+
+  p {
+    width: 100%;
+  }
 }
 </style>
